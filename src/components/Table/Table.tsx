@@ -24,12 +24,12 @@ const Table = <T,>({ data, children }: TableProps<T>) => {
       size="sm"
       variant="simple"
       border="1px solid"
-      borderColor="gray.500"
+      borderColor="gray.300"
     >
       <Thead>
         <Tr>
           {React.Children.map(_children, (column) => (
-            <Th key={column.key} borderColor="gray.600">
+            <Th key={column.key} borderColor="gray.300">
               {column.props.label}
             </Th>
           ))}
@@ -39,7 +39,7 @@ const Table = <T,>({ data, children }: TableProps<T>) => {
         {_data.map((item) => (
           <Tr key={nanoid()}>
             {React.Children.map(_children, (column) => (
-              <Td key={column.key} borderColor="gray.600">
+              <Td key={column.key} borderColor="gray.300">
                 {column.props.children(item)}
               </Td>
             ))}
