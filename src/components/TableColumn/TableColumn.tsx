@@ -1,3 +1,4 @@
+import React from "react";
 import { ReactNode } from "react";
 
 type TableColumnProps<T> = {
@@ -7,4 +8,4 @@ type TableColumnProps<T> = {
 
 const TableColumn = <T,>(_: TableColumnProps<T>) => null;
 
-export default TableColumn;
+export default React.memo(TableColumn) as typeof TableColumn;
